@@ -1,7 +1,13 @@
 const inquirer = require('inquirer');
 const questions = require('./lib/questions.js')
 
+const viewTables = require('./executables/viewtables.js')
+const addData = require('./executables/adddata.js')
+const updateData = require('./executables/updatedata.js')
 
+const { viewDepartments, viewRoles, viewEmployees } = viewTables;
+const { addDepartment, addRole, addEmployee } = addData;
+const { updateEmployeeRole } = updateData;
 
 
 const runInquirer = () => {
@@ -9,7 +15,7 @@ const runInquirer = () => {
        questions
     )
     .then((answers) => {
-        switch (answers.value.name) {
+        switch (answers.userAction.name) {
             case 'viewDepts':
                 viewDepartments();
                 break;
@@ -31,8 +37,10 @@ const runInquirer = () => {
             case 'updateEmpRole':
                 updateEmployeeRole();
                 break;
-
         }
+    })
+    .then(() => {
+        runInquirer();
     })
 }
 
@@ -42,3 +50,5 @@ let init = () => {
 }
 
 init();
+
+

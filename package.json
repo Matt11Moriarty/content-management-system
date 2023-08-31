@@ -1,0 +1,24 @@
+{
+  "name": "content-management-system",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Matt11Moriarty/content-management-system.git"
+  },
+  "author": "matt11moriarty",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Matt11Moriarty/content-management-system/issues"
+  },
+  "homepage": "https://github.com/Matt11Moriarty/content-management-system#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "inquirer": "^8.2.4",
+    "mysql2": "^3.6.0"
+  }
+}

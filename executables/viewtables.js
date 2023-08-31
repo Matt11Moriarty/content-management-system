@@ -1,6 +1,7 @@
 
 const viewDepartments = () => {
     console.log('viewDepartments executed');
+    
 }
 
 const viewRoles = () => {

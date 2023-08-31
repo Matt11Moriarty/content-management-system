@@ -12,7 +12,7 @@ const { updateEmployeeRole } = updateData;
 
 const runInquirer = () => {
     inquirer.prompt(
-       questions
+       questions.mainQuestionSet
     )
     .then((answers) => {
         switch (answers.userAction.name) {

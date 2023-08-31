@@ -1,13 +1,19 @@
+const express = require('express');
 const inquirer = require('inquirer');
-const questions = require('./lib/questions.js')
+const questions = require('./lib/questions.js');
 
-const viewTables = require('./executables/viewtables.js')
-const addData = require('./executables/adddata.js')
-const updateData = require('./executables/updatedata.js')
+
+const viewTables = require('./executables/viewtables.js');
+const addData = require('./executables/adddata.js');
+const updateData = require('./executables/updatedata.js');
 
 const { viewDepartments, viewRoles, viewEmployees } = viewTables;
 const { addDepartment, addRole, addEmployee } = addData;
 const { updateEmployeeRole } = updateData;
+
+const app = express();
+
+
 
 
 const runInquirer = () => {

@@ -2,6 +2,9 @@ const express = require('express');
 const inquirer = require('inquirer');
 const questions = require('./lib/questions.js');
 
+//testing
+// const utils = require('./lib/utils.js')
+
 
 const viewTables = require('./executables/viewtables.js');
 const addData = require('./executables/adddata.js');
@@ -12,8 +15,6 @@ const { addDepartment, addRole, addEmployee } = addData;
 const { updateEmployeeRole } = updateData;
 
 const app = express();
-
-
 
 
 const runInquirer = () => {
@@ -47,8 +48,8 @@ const runInquirer = () => {
         }
     })
     .then(() => {
-        console.log('\n')
-        runInquirer();
+        // console.log('\n')
+        // runInquirer();
     })
 }
 

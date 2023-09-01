@@ -12,10 +12,11 @@ const db = mysql.createConnection(
 
 
 const viewDepartments = () => {
-    db.query('SELECT * FROM departments', function (err, results) {
+    db.query(`SELECT * FROM departments`, function (err, results) {
         console.table(results);
-      })
+    })
 }
+
 
 const viewRoles = () => {
     db.query(`SELECT * FROM roles`, function (err, results) {

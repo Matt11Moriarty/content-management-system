@@ -21,7 +21,8 @@ const runInquirer = () => {
        questions.mainQuestionSet
     )
     .then((answers) => {
-        switch (answers.userAction.name) {
+        console.log(answers);
+        switch (answers.userAction) {
             case 'viewDepts':
                 viewDepartments();
                 break;
@@ -46,6 +47,7 @@ const runInquirer = () => {
         }
     })
     .then(() => {
+        console.log('\n')
         runInquirer();
     })
 }

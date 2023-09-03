@@ -34,10 +34,10 @@ const runInquirer = () => {
                 viewEmployees();
                 break;
             case 'addDept':
-                addDepartment();
+                addDepartment(answers);
                 break;
             case 'addRole':
-                addRole();
+                addRole(answers);
                 break;
             case 'addEmp':
                 addEmployee();

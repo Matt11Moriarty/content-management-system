@@ -13,7 +13,7 @@ const db = mysql.createConnection(
 const addDepartment = (answers) => {
     const sql = `INSERT INTO departments (name)
     VALUES (?)`;
-    const input = answers.//blah blah
+    const input = answers.deptName
 
     db.query(sql, input, (err, result) => {
         if (err) {

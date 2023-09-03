@@ -10,4 +10,4 @@ PROBLEMS TO DISCUSS WITH DOMINIQUE:
 
 1. Can't get my choices array to dynamically generate
 <!-- 2. If I choose addRole, it asks the right questions but then moves on to the addEmp questions -->
-2. Can't get it to loop correctly without fucking up the table formatting
+2. Can't get it to loop correctly without messing up the table formatting

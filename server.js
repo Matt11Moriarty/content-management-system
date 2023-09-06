@@ -41,6 +41,9 @@ async function Start() {
             const addRoleanswers = await inquirer.prompt(addRoleQuestions);
             const addNewRole = await queries.addRole(addRoleanswers);
             console.log('New role added')
+            break;
+        case 'addEmp':
+            const addEmpQuestions = await questions.addEmp();
     }   
 
 }

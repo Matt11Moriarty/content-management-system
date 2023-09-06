@@ -17,12 +17,22 @@ const queries = {
         })
     },
     viewRolesTable: async () => {
-        db.query(`SELECT * FROM roles`, function (err, results) {
+        db.query(`
+        SELECT r.title, r.id AS role_id, d.name AS department_name, r.salary
+        FROM roles r 
+        JOIN departments d ON r.department_id = d.id        
+        `, function (err, results) {
             console.table(results);
         })
     },
     viewEmployeesTable: async () => {
-        db.query(`SELECT * FROM employees`, function (err, results) {
+        db.query(`
+        SELECT e.id AS employee_id, e.first_name, e.last_name, r.title AS job_title, d.name AS department_name, r.salary, e2.first_name AS manager
+        FROM employees e 
+        JOIN roles r ON e.role_id = r.id
+        JOIN departments d ON r.department_id = d.id
+        JOIN employees e2 ON e.manager_id = e2.id
+        `, function (err, results) {
             console.table(results);
         })
     },

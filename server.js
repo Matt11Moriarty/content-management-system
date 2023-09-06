@@ -18,7 +18,7 @@ const app = express();
 
 
 async function Start() {
-    const {action} = await inquirer.prompt(questions.userAction())
+    const {action} = await inquirer.prompt(questions.userAction());
 
     switch (action) {
         case 'viewDepts':
@@ -32,18 +32,21 @@ async function Start() {
             break;
         case 'addDept':
             const addDeptQuestions = await questions.addDept();
-            const addDeptAnswers = await inquirer.prompt(addDeptQuestions)
+            const addDeptAnswers = await inquirer.prompt(addDeptQuestions);
             const addNewDepartment = await queries.addDepartment(addDeptAnswers);
-            console.log('New department added')
+            console.log('New department added');
             break;
         case 'addRole':
             const addRoleQuestions = await questions.addRole();
             const addRoleanswers = await inquirer.prompt(addRoleQuestions);
             const addNewRole = await queries.addRole(addRoleanswers);
-            console.log('New role added')
+            console.log('New role added');
             break;
         case 'addEmp':
             const addEmpQuestions = await questions.addEmp();
+            const addEmpAnswers = await inquirer.prompt(addEmpQuestions);
+            const addNewEmployee = await queries.addEmp(addEmpAnswers);
+            console.log('New employee added');
     }   
 
 }

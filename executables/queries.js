@@ -45,6 +45,16 @@ const queries = {
             }
         })
     },
+    addEmp: async (answers) => {
+        const sql = `INSERT INTO employees (first_name, last_name, role_id, manager_id) VALUES (?, ?, ?, ?)`
+        const input = [answers.empFirstName, answers.empLastName, answers.empRole, answers.empManager]
+
+        db.query(sql, input, (err, result) => {
+            if (err) {
+                console.log(err);
+            }
+        })
+    },
 
     allEmployeesArray: async () => {
         const [employees] = await db.promise().query(`SELECT id, first_name FROM employees`);

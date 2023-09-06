@@ -17,7 +17,6 @@ const viewDepartments = () => {
     })
 }
 
-
 const viewRoles = () => {
     db.query(`SELECT * FROM roles`, function (err, results) {
         console.table(results);

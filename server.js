@@ -42,14 +42,8 @@ async function Start() {
             const updateEmpAnswers = await inquirer.prompt(updateEmpQuestions);
             const updateEmployee = await queries.updateEmp(updateEmpAnswers);
             console.log('Employee role updated')
-    } 
+   } 
+   Start();
 }
 
-// async function main() {
-//     while (true) {
-//         await start();
-//     }
-// }
-
-// main();
 Start();

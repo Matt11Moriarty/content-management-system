@@ -12,21 +12,22 @@ const db = mysql.createConnection(
 
 
 const viewDepartments = () => {
-
-    console.log('viewDepartments exectuted')
-    db.query('SELECT * FROM departments', function (err, results) {
-        console.log(results);
-      });
+    db.query(`SELECT * FROM departments`, function (err, results) {
+        console.table(results);
+    })
 }
 
-viewDepartments();
 
 const viewRoles = () => {
-    console.log('viewRoles executed');
+    db.query(`SELECT * FROM roles`, function (err, results) {
+        console.table(results);
+    })
 }
 
 const viewEmployees = () => {
-    console.log('viewEmployees executed');
+    db.query(`SELECT * FROM employees`, function (err, results) {
+        console.table(results);
+    })
 }
 
 module.exports = {

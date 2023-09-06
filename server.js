@@ -2,6 +2,9 @@ const express = require('express');
 const inquirer = require('inquirer');
 const questions = require('./lib/questions.js');
 
+//testing
+// const utils = require('./lib/utils.js')
+
 
 const viewTables = require('./executables/viewtables.js');
 const addData = require('./executables/adddata.js');
@@ -14,14 +17,13 @@ const { updateEmployeeRole } = updateData;
 const app = express();
 
 
-
-
 const runInquirer = () => {
     inquirer.prompt(
        questions.mainQuestionSet
     )
     .then((answers) => {
-        switch (answers.userAction.name) {
+        console.log(answers);
+        switch (answers.userAction) {
             case 'viewDepts':
                 viewDepartments();
                 break;
@@ -32,10 +34,10 @@ const runInquirer = () => {
                 viewEmployees();
                 break;
             case 'addDept':
-                addDepartment();
+                addDepartment(answers);
                 break;
             case 'addRole':
-                addRole();
+                addRole(answers);
                 break;
             case 'addEmp':
                 addEmployee();
@@ -46,7 +48,8 @@ const runInquirer = () => {
         }
     })
     .then(() => {
-        runInquirer();
+        // console.log('\n')
+        // runInquirer();
     })
 }
 

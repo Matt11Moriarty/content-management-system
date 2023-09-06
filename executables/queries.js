@@ -78,10 +78,6 @@ const queries = {
         return departments;
     },
 }
-// const viewDepartmentsTable = () => {
-//     db.query(`SELECT * FROM departments`, function (err, results) {
-//         console.table(results);
-//     })
-// }
+
 
 module.exports = queries

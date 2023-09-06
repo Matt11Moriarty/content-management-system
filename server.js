@@ -47,6 +47,13 @@ async function Start() {
             const addEmpAnswers = await inquirer.prompt(addEmpQuestions);
             const addNewEmployee = await queries.addEmp(addEmpAnswers);
             console.log('New employee added');
+            break;
+        case 'updateEmpRole':
+            const updateEmpQuestions = await questions.updateEmpRole();
+            const updateEmpAnswers = await inquirer.prompt(updateEmpQuestions);
+            // console.log(updateEmpAnswers);
+            const updateEmployee = await queries.updateEmp(updateEmpAnswers);
+            console.log('Employee role updated')
     }   
 
 }

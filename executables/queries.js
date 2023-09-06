@@ -55,7 +55,16 @@ const queries = {
             }
         })
     },
+    updateEmp: async (answers) => {
+        const sql = `UPDATE employees SET role_id = ? WHERE id = ?`
+        const input = [answers.roleChoice, answers.empChoice]
 
+        db.query(sql, input, (err, result) => {
+            if (err) {
+                console.log(err);
+            }
+        })
+    },
     allEmployeesArray: async () => {
         const [employees] = await db.promise().query(`SELECT id, first_name FROM employees`);
         return employees;

@@ -22,8 +22,8 @@ Install dependencies using `npm i`
 
 ## Usage
 
-Demo Recording: https://drive.google.com/file/d/16fu3hePDCgP_2sAPSrMh7QRcFbLhR9mD/view
-
+Demo Recording: [https://drive.google.com/file/d/16fu3hePDCgP_2sAPSrMh7QRcFbLhR9mD/view
+](https://drive.google.com/file/d/1e9Ju2anLK-dUhUfDa9dlAdpTyuWcCY7m/view)
 1. After installing dependencies, initialize and seed the database using `mysql`
 2. Start the application using `node server.js`
 3. Follow the prompts to complete the desired action

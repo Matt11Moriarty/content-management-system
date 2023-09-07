@@ -13,6 +13,7 @@ const db = mysql.createConnection(
 const queries = {
     viewDepartmentsTable: async () => {
         db.query(`SELECT * FROM departments`, function (err, results) {
+            console.log('\n')
             console.table(results);
         })
     },
@@ -22,6 +23,7 @@ const queries = {
         FROM roles r 
         JOIN departments d ON r.department_id = d.id        
         `, function (err, results) {
+            console.log('\n');
             console.table(results);
         })
     },
@@ -33,6 +35,7 @@ const queries = {
         JOIN departments d ON r.department_id = d.id
         JOIN employees e2 ON e.manager_id = e2.id
         `, function (err, results) {
+            console.log('\n');
             console.table(results);
         })
     },
